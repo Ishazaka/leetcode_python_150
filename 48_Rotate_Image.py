@@ -39,3 +39,19 @@ class Solution:
                 matrix[top + i][r] = topLeft
             r -= 1
             l += 1
+
+
+
+
+# 3. Reverse And Transpose
+# Time complexity: O(n 2)
+# Space complexity: O(1)
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        # Reverse the matrix vertically
+        matrix.reverse()
+
+        # Transpose the matrix
+        for i in range(len(matrix)):
+            for j in range(i + 1, len(matrix)):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
