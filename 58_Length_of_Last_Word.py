@@ -17,7 +17,7 @@ class Solution:
         return length
 
 
-// 2nd way
+# // 2nd way
 
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
@@ -28,3 +28,10 @@ class Solution:
             i -= 1
             length += 1
         return length
+
+
+# // built in function
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        return len(s.split().pop())
